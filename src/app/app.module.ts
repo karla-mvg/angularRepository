@@ -12,13 +12,22 @@ import { MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { AnimalsComponent } from './animals/animals.component';
+import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AnimalsComponent,
+    AnimalDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +38,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatInputModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatSnackBarModule,
+    MatCheckboxModule,
+    MatProgressBarModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

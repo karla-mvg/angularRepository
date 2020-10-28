@@ -7,7 +7,7 @@
     <mat-card-content [formGroup]="formLogin">
       <mat-form-field class="input-login">
         <mat-label>Usuario</mat-label>
-        <input matInput placeholder="Ej. Admin"  formControlName="username">
+        <input matInput placeholder="Ej. Admin"  formControlName="username" >
         <mat-error *ngIf="formLogin.get('username').errors !=null && formLogin.get('username').errors.required">El usuario es requerido</mat-error>
         <mat-error *ngIf="formLogin.get('username').errors !=null && formLogin.get('username').errors.minlength">El usuario debe ser mayor a 3 caracteres</mat-error>
         <mat-error *ngIf="formLogin.get('username').errors !=null && formLogin.get('username').errors.pattern">El usuario debe ser email valido</mat-error>
@@ -19,6 +19,6 @@
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions class="text-center">
-      <button mat-raised-button color="primary" [disabled]="formLogin.invalid" (click)="login()" >Ingresar</button>
+      <button mat-raised-button color="primary" [disabled]="formLogin.invalid || isLoading" (click)="login()" >Ingresar</button>
     </mat-card-actions>
  </mat-card>
