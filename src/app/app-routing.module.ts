@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path: 'animal-detail',
     component : AnimalDetailComponent,
+  },
+  {
+    path: 'animal-detail/:id',
+    component : AnimalDetailComponent,
   },{
     path: '**',
     redirectTo: '/login'
